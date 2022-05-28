@@ -1,5 +1,15 @@
+import Navbar from './components/Navbar'
+import Trip from './components/Trip'
+import data from './data'
+
 function App() {
-  return <div className="App"></div>
+  const trips = data.map((item) => <Trip {...item} />)
+  return (
+    <div className="App">
+      <Navbar />
+      {trips}
+    </div>
+  )
 }
 
 export default App
